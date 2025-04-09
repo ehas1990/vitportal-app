@@ -10,6 +10,10 @@ function TimeChallenge({ title, targetTime}) {
         }, targetTime*1000);
         setTimerStarted(true);
     }
+    function handleStop()
+    {
+        
+    }
   return (
     <section className='challenge'>
              <h2>{title}</h2>
@@ -22,7 +26,8 @@ function TimeChallenge({ title, targetTime}) {
                   {timerStarted ? 'Stop': 'Start'}  Challenge
                 </button>
              </p>
-             <p className={timerStarted ? 'active' : undefined}>Time is runnig... / Timer inactive</p>
+             <p className={timerStarted ? 'active' : undefined}>
+                {timerStarted ? 'Time is runnig...' : 'Timer inactive'}</p>
     </section> 
   )
 }
